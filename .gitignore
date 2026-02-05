@@ -1,0 +1,22 @@
+# Bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated example outputs (store in docs/_static if desired)
+examples/*.png
+examples/**/*.png

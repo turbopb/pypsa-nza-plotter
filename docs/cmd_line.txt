@@ -1,0 +1,13 @@
+1. pip uninstall -y plotlib pypsa-nza-plotter
+
+2. Get-ChildItem -Recurse -Filter "*.egg-info" | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .\build -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .\dist -ErrorAction SilentlyContinue
+
+3.pip install -e .
+
+4. pip show pypsa-nza-plotter
+
+5. pip show plotlib
+
+6. pytest -q
