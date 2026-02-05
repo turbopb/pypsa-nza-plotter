@@ -1,3 +1,5 @@
+"""
+"""
 import tempfile
 from pypsa_nza_plotter import PlotConfig
 

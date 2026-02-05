@@ -1,3 +1,5 @@
+"""
+"""
 import matplotlib
 matplotlib.use("Agg")
 
@@ -20,3 +22,5 @@ def test_line_plot_smoke(tmp_path):
     save_plot(fig, out, dpi=150)
     assert out.exists()
     assert out.stat().st_size > 0
+
+

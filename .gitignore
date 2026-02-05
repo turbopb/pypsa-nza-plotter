@@ -20,3 +20,5 @@ Thumbs.db
 # Generated example outputs (store in docs/_static if desired)
 examples/*.png
 examples/**/*.png
+
+
