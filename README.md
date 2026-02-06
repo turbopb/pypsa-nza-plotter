@@ -1,4 +1,3 @@
-````markdown
 # pypsa-nza-plotter
 
 **Configuration-driven, reproducible plotting for publication-quality scientific figures**
