@@ -2,8 +2,9 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it."
 title: "PlotLib: configuration-driven publishing-quality plotting for research"
 version: "0.1.0"
+url: https://github.com/turbopb/pypsa-nza-plotter.git
 authors:
   - family-names: "Bruneau"
     given-names: "Phillippe"
-    orcid: "https://orcid.org/0009-0000-0000-0000"
+    orcid: "https://orcid.org/0009-0002-7136-3477"
 date-released: "2026-02-04"

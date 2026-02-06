@@ -16,7 +16,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
-from plotlib import create_area_plot, save_plot
+from pypsa_nza_plotter import create_area_plot, save_plot
 from models import SeriesConfig, PlotConfig
 
 import matplotlib.pyplot as plt

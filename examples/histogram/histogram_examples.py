@@ -15,7 +15,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
-from plotlib import create_histogram, save_plot
+from pypsa_nza_plotter import create_histogram, save_plot
 from models import SeriesConfig, PlotConfig
 
 

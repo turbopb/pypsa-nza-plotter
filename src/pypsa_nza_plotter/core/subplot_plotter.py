@@ -27,19 +27,15 @@ Mixed plot types:
     # using the existing plot functions
 """
 
-import matplotlib
-##matplotlib.use('Agg')  # Commented for interactive  # Commented for interactive
-from matplotlib.figure import Figure
+from __future__ import annotations
+
 from matplotlib import pyplot as plt
 import numpy as np
 from typing import Tuple, Optional, List
-import sys
-import os
 
-# Add parent directory to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from ..models.plot_config import PlotConfig
 
-from models.plot_config import PlotConfig
+
 
 
 def create_subplots(
@@ -332,14 +328,3 @@ def add_subplot_labels(
         )
 
 
-def save_plot(fig: plt.Figure, filename: str, dpi: int = 300) -> None:
-    """
-    Save figure to file.
-    
-    Args:
-        fig: Matplotlib figure
-        filename: Output filename
-        dpi: Resolution (default: 300)
-    """
-    fig.savefig(filename, dpi=dpi, bbox_inches='tight')
-    plt.close(fig)
