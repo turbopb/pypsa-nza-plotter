@@ -38,12 +38,6 @@ The core design principles are:
 
 ## Installation
 
-### From PyPI
-
-```bash
-pip install pypsa-nza-plotter
-````
-
 ### From source (development / review)
 
 ```bash
@@ -54,7 +48,7 @@ pip install -e .
 
 ---
 
-## Minimal runnable demo (reviewers should start here)
+## Minimal runable demo
 
 The following command generates two example figures (a line plot and a histogram)
 using the public API and saves them to disk.
