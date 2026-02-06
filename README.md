@@ -1,6 +1,3 @@
-Thank you for your patience. I u
----
-
 ````markdown
 # pypsa-nza-plotter
 
