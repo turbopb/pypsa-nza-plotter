@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it."
 title: "PlotLib: configuration-driven publishing-quality plotting for research"
-version: "0.1.0"
+version: "0.1.1"
 url: https://github.com/turbopb/pypsa-nza-plotter.git
 authors:
   - family-names: "Bruneau"
