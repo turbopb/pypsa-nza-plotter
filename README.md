@@ -2,15 +2,27 @@
 
 ** A configuration-driven, reproducible plotting for publication-quality scientific figures**
 
-`pypsa-nza-plotter` is a lightweight Python package built on top of Matplotlib that enables
-**reproducible, configurable, publication-quality plots** through a clear separation between:
+# pypsa-nza-plotter
 
-- **what is plotted** (data and per-series intent), and  
-- **how it is styled** (global figure and axes configuration).
+**pypsa-nza-plotter** is a configuration-driven plotting system for producing reproducible, publication-quality scientific figures using matplotlib.
 
-The package was originally developed to support energy-systems analysis workflows using
-PyPSA (New Zealand case study), but it is **general-purpose** and applicable to any
-scientific plotting workflow.
+Rather than embedding plot structure, styling, and parameters directly in Python scripts, figures are specified declaratively via configuration files. These configurations are then rendered programmatically, enabling deterministic regeneration of figures across machines, experiments, and analysis pipelines with minimal code duplication.
+
+The package is designed for research workflows where figures are generated repeatedly (e.g. across scenarios, sensitivity analyses, or model runs) and where reproducibility, consistency, and clarity are more important than interactive plotting.
+
+
+
+## Scope
+
+### What this package is
+- A configuration-driven interface to matplotlib
+- A tool for reproducible, publication-quality figure generation
+- Designed for batch plotting, automation, and research pipelines
+
+### What this package is not
+- Not a replacement for matplotlib
+- Not an interactive plotting environment
+- Not a grammar-of-graphics framework
 
 ---
 

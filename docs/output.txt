@@ -7,3 +7,29 @@ git pull
 git add .github\workflows\.rerun-ci.txt
 git commit -m "Trigger CI"
 git push
+
+
+
+pypsa-nza-plotter is a configuration-driven plotting system for producing reproducible, publication-quality matplotlib figures. Plot structure, styling, and parameters are defined declaratively in configuration files, allowing figures to be regenerated deterministically across machines and experiments with minimal code duplication.
+
+# pypsa-nza-plotter
+
+**pypsa-nza-plotter** is a configuration-driven plotting system for producing reproducible, publication-quality scientific figures using matplotlib.
+
+Rather than embedding plot structure, styling, and parameters directly in Python scripts, figures are specified declaratively via configuration files. These configurations are then rendered programmatically, enabling deterministic regeneration of figures across machines, experiments, and analysis pipelines with minimal code duplication.
+
+The package is designed for research workflows where figures are generated repeatedly (e.g. across scenarios, sensitivity analyses, or model runs) and where reproducibility, consistency, and clarity are more important than interactive plotting.
+
+
+
+## Scope
+
+### What this package is
+- A configuration-driven interface to matplotlib
+- A tool for reproducible, publication-quality figure generation
+- Designed for batch plotting, automation, and research pipelines
+
+### What this package is not
+- Not a replacement for matplotlib
+- Not an interactive plotting environment
+- Not a grammar-of-graphics framework
