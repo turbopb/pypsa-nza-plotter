@@ -15,7 +15,7 @@ from __future__ import annotations
 
 # Version is intentionally defined here so tools can introspect it.
 # You can automate this later (e.g., via setuptools-scm), but keep it simple for v0.1.
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 # ---------------------------------------------------------------------------
 # Core public API: models (stable)

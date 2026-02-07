@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pypsa-nza-plotter"
-version = "0.1.0"
+version = "0.1.1"
 description = "Configuration-driven, reproducible plotting for publication-quality scientific figures"
 readme = "README.md"
 license = {text = "MIT"}
