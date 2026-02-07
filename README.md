@@ -21,7 +21,7 @@ The core design principles are:
 - **Declarative configuration**  
   Plot appearance is defined via a `PlotConfig` object (or YAML file), not ad-hoc Matplotlib calls.
 
-- **Separation of concerns**  
+- **Separation of configuration and data**  
   - `PlotConfig` controls global figure and axes styling  
   - `SeriesConfig` controls per-series intent (data, colour, label, etc.)
 
