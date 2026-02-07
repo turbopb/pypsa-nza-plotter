@@ -1,15 +1,9 @@
-Installing collected packages: pypsa-nza-plotter
-  Attempting uninstall: pypsa-nza-plotter
-    Found existing installation: pypsa-nza-plotter 0.1.0
-    Uninstalling pypsa-nza-plotter-0.1.0:
-      Successfully uninstalled pypsa-nza-plotter-0.1.0
-Successfully installed pypsa-nza-plotter-0.1.0
-(pypsa-nza-joss) PS C:\Users\Public\Documents\Thesis\analysis\pypsa-nza-plotter> pytest -q
-..                                                                                                                               [100%]
-2 passed in 0.43s
-(pypsa-nza-joss) PS C:\Users\Public\Documents\Thesis\analysis\pypsa-nza-plotter> python -m pypsa_nza_plotter.demo --outdir demo_output
+git checkout main
+git pull
 
-Demo figures created:
-  - C:\Users\Public\Documents\Thesis\analysis\pypsa-nza-plotter\demo_output\demo_line.png
-  - C:\Users\Public\Documents\Thesis\analysis\pypsa-nza-plotter\demo_output\demo_histogram.png
-(pypsa-nza-joss) PS C:\Users\Public\Documents\Thesis\analysis\pypsa-nza-plotter>
+# Create/append a tiny file purely to trigger CI
+"" | Out-File -Append .github\workflows\.rerun-ci.txt
+
+git add .github\workflows\.rerun-ci.txt
+git commit -m "Trigger CI"
+git push
