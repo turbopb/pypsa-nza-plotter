@@ -1,6 +1,6 @@
 # pypsa-nza-plotter
 
-**Configuration-driven, reproducible plotting for publication-quality scientific figures**
+** A configuration-driven, reproducible plotting for publication-quality scientific figures**
 
 `pypsa-nza-plotter` is a lightweight Python package built on top of Matplotlib that enables
 **reproducible, configurable, publication-quality plots** through a clear separation between:
