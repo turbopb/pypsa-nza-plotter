@@ -1,0 +1,92 @@
+# Hydrogen at Tiwai Project Summary 
+
+## Research Question: Can hydrogen production replace the Tiwai Point aluminum 
+smelter as an industrial anchor load in Southland, and what value does flexible 
+electrolyzer operation provide to the electricity system? 
+
+## Context - Tiwai aluminum smelter consumes ~572 MW baseload 
+(~13% of NZ electricity) - Contract uncertain, potential closure creates 
+planning challenge - Southland has strong wind resources but limited local demand 
+without Tiwai - Transmission capacity from Southland to North Island could be 
+freed up or remain valuable - Hydrogen for industry/export is under-analyzed in  NZ context
+ 
+## Analytical Approach 
+**Capacity expansion planning** using PyPSA-NZA model: 
+- Use existing detailed NZ network topology (Southland region + HVDC to North Island) 
+- Make key generation capacity extendable (Southland wind/solar, potentially national VRE) 
+- Add electrolyzer as extendable "Link" component at Tiwai/Manapouri bus 
+- Optimize what gets built and how system operates under different scenarios 
+
+## Scenario Framework 
+**Scenario A: Baseline** 
+- Tiwai aluminum operating, current system
+ 
+**Scenario B: Tiwai closure** 
+- No replacement load, see how system adapts
+ 
+**Scenario C: Baseload hydrogen** 
+- Electrolyzer replaces Tiwai with equivalent baseload H2 production
+ 
+**Scenario D: Flexible hydrogen** 
+- Electrolyzer sized and operated to absorb excess VRE, no fixed H2 demand ## Key Modeling Decisions 
+- **Time horizon**: Single planning year (e.g., 2035) 
+or multi-year transition - **Temporal resolution**: Representative periods (computational efficiency) 
+or full 8760 hours - **VRE penetration**: Fix national renewable target or let optimization 
+decide - **Extendable components**: Southland wind/solar, electrolyzer capacity, possibly national VRE
+ 
+## Expected Outputs - Optimal electrolyzer size and capacity factor under each scenario 
+- New generation capacity (especially Southland wind) - System costs comparison (total 
+annualized capex + opex) - Transmission flows and utilization (HVDC, local constraints) 
+- VRE curtailment with/without hydrogen - Hydrogen production cost ($/kg H2) 
+- Locational marginal prices at key buses ## Policy Value 
+- Economic competitiveness of H2 vs. aluminum 
+- Value of grid flexibility from responsive industrial load 
+- Transmission infrastructure planning (build more vs. utilize freed capacity) 
+- Regional economic development implications (Southland) 
+- Path to industrial decarbonization 
+
+## Implementation Strategy 
+1. Add electrolyzer Link components to existing PyPSA-NZA model 
+2. Configure extendable generators for capacity expansion 
+3. Define scenario parameters and constraints 
+4. Run capacity expansion optimization for each scenario 
+5. Extract and compare results across scenarios 
+6. Focus on policy-relevant metrics and trade-offs
+ 
+--- 
+## Alternative flexible loads **Yes, you can substitute other load absorbers**, and
+ this could broaden your analysis: 
+ ### Electric Vehicle Charging 
+ **Pros**: 
+ - Growing policy interest in NZ transport electrification 
+ - Natural demand flexibility (charge when cheap) 
+ - Distributed across regions (not just Southland) 
+ **Cons**: - Much smaller scale than Tiwai (~572 MW vs. maybe 50-100 MW EV charging 
+ peak nationally by 2035) 
+ - More complex modeling (need charging patterns, V2G vs. unidirectional) 
+ - Less spatial concentration (harder to see regional transmission impacts) 
+ **Modeling**: Add as flexible Load with time-of-use constraints ### Data Centers 
+ **Pros**: 
+ - Large, concentrated loads (100-500 MW possible) 
+ - Some computational workloads are time-shiftable 
+ - Real commercial interest in NZ (cheap renewable power) 
+ **Cons**: 
+ - Less operational flexibility than electrolyzers (many workloads are latency-sensitive) 
+ - Different value proposition (selling compute vs. producing molecules/fuel) 
+ - Less established flexible operation precedent 
+ **Modeling**: 
+ Add as partially flexible Load or curtailable load with payment for interruption 
+ 
+ ### Comparison for your case: **Hydrogen** is the best fit because: 
+ 1. **Scale matches**: Can actually replace Tiwai's 572 MW 
+ 2. **True flexibility**: Can ramp 0-100% on sub-hourly timescales 
+ 3. **Energy storage**: Produced H2 can be stored (unlike data/charging which must meet demand) 
+ 4. **Policy relevance**: Industrial decarbonization pathway, not just load shifting
+  
+ **However**, you could do a **comparative analysis**: 
+ - Size each technology to absorb same amount of excess VRE energy 
+ - Compare flexibility value, capacity factors, system costs 
+ - Shows policymakers the relative merits of different flexible load strategies 
+ If you want to keep scope manageable, **stick with hydrogen**. If you want to 
+ expand impact, add EV charging as a sensitivity case (simpler than data centers). 
+ Want to start with hydrogen-only, or include a comparison?
